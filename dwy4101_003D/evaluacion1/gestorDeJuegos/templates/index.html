@@ -1,0 +1,457 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>C&S Universe</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://media.discordapp.net/attachments/704541749690761217/758129576769093692/triangle_PNG30.png?width=481&height=481" type="image/x-icon">
+    <!--Json CDN-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <nav id="nav" class="nav1">
+
+            <div class="contenedor-nav">
+
+                <div class="logo">
+
+                    <img src="{% static '/img/blzpng.png'%}" alt="">
+
+
+                </div>
+
+                <!--en este div no se colocan imagenes es caca malo-->
+                <div class="enlaces" id="enlaces">
+
+                    <a href="#" id="enlace-inicio" class="btn-header">Inicio</a>
+                    <a href="#" id="enlace-equipo" class="btn-header">Tiendas</a>
+                    <a href="#" id="enlace-servicio" class="btn-header">Servicios</a>
+                    <a href="#" id="enlace-trabajo" class="btn-header">Categorias</a>
+                    <a href="#" id="enlace-contacto" class="btn-header">Contacto</a>
+                    <a href="/inicio" id="enlace-contacto" class="btn-header">Iniciar Sesion</a>
+
+
+
+
+                </div>
+
+                <button class="botonimagen"></button>
+        </nav>
+
+        <!--carrusel-->
+		
+        <div class="carousel">
+
+            <div class="carousel-contenedor">
+
+                <button aria-label="Anterior" class="carousel-anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+					
+                <!--dentro de los botones estara el carrusel-->
+
+                <div class="carousel-lista">
+
+                    <div class="carousel-element">
+
+                        <img src="{% static '/img/carrusel2.jpg' %}" alt="Rock and Roll Hall of Fame">
+                        <p>Innova</p>
+
+                    </div>
+
+                    <div class="carousel-element">
+                        <img src="{% static '/img/carrusel3.jpg' %}" alt="Rock and Roll Hall of Fame">
+                        <p>Crea</p>
+
+                    </div>
+
+                    <div class="carousel-element">
+                        <img src="{% static '/img/carrusel.jpg' %}" alt="Rock and Roll Hall of Fame">
+                        <p>Conoce</p>
+
+                    </div>
+
+                    <div class="carousel-element">
+                        <img src="{% static '/img/carrusel4.jpg' %}" alt="Rock and Roll Hall of Fame">
+                        <p>Sorprendete</p>
+
+                    </div>
+
+                    <div class="carousel-element">
+                        <img src="{% static '/img/carrusel6.jpg' %}" alt="Rock and Roll Hall of Fame">
+                        <p>Destruye</p>
+
+                    </div>
+
+                    <div class="carousel-element">
+                        <img src="{% static '/img/carrusel5.jpg' %}" alt="Rock and Roll Hall of Fame">
+                        <p>Se el Mejor</p>
+
+                    </div>
+
+                    <div class="carousel-element">
+                        <img src="{% static '/img/carrusel7.jpg' %}" alt="Rock and Roll Hall of Fame">
+                        <p>Crea un Mundo</p>
+
+                    </div>
+
+                </div>
+
+                <button aria-label="Siguiente" class="carousel-siguiente">
+                    <i class="fas fa-chevron-right"></i>
+                    </button>
+            </div>
+
+            <div role="tablist" class="carousel-indicadores"></div>
+        </div> 
+
+
+
+    </header>
+
+
+    <main>
+
+        <!--Localizacion de la tienda-->
+
+        <section class="team contenedor" id="equipo">
+
+            <h3>Sedes de trabajo</h3>
+
+            <p class="after">Conoce nuestras sedes asombrosa y creativa</p>
+
+            <div class="card">
+
+                <div class="content-card">
+
+                    <div class="people">
+
+                        <a href="https://www.google.cl/maps/place/SP+Digital/@-33.4244149,-70.6181614,17z/data=!4m12!1m6!3m5!1s0x9662cf689790f50b:0xb43628755268e1ed!2sSP+Digital!8m2!3d-33.4240929!4d-70.6184707!3m4!1s0x9662cf689790f50b:0xb43628755268e1ed!8m2!3d-33.4240929!4d-70.6184707"><img src="https://i.ibb.co/Fb7qWnF/sede1.jpg" alt="sede1" border="0"></a>
+
+                    </div>
+
+                    <div class="texto-team">
+
+                        <h4>Vitacura</h4>
+                        <p></p>
+
+                    </div>
+
+                </div>
+
+                <div class="content-card">
+
+                    <div class="people">
+
+                        <a href="https://www.google.cl/maps/place/Cross+Mountain/@-33.3916561,-70.5670319,16.75z/data=!4m13!1m7!3m6!1s0x9662cf36b1f9cf4f:0xa6f44ce384c3b90b!2sVitacura,+Regi%C3%B3n+Metropolitana!3b1!8m2!3d-33.3905211!4d-70.5724124!3m4!1s0x9662ced295aa666b:0xffc2957dced5658f!8m2!3d-33.3930035!4d-70.5625302"><img src="https://i.ibb.co/KybJsdW/sede2.jpg" alt="sede2" border="0"></a>
+
+                    </div>
+
+                    <div class="texto-team">
+
+                        <h4>Providencia</h4>
+                        <p></p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+        <section class="about" id="servicio">
+
+            <div class="contenedor">
+
+                <h3>Nuestros servicios</h3>
+                <p class="after">Siempre mejorando para ti</p>
+
+                <div class="servicios">
+
+                    <div class="caja-servicios">
+
+                        <img src="{% static '/img/heart.png'%}" alt="">
+
+                        <h4>Nuevas Entregas Cada Semana</h4>
+                        <p></p>
+
+                    </div>
+
+
+                    <div class="caja-servicios">
+
+                        <img src="{% static '/img/responsive.png'%}" alt="">
+
+                        <h4>Construimos para tu comodidad</h4>
+                        <p></p>
+
+                    </div>
+
+                    <div class="caja-servicios">
+
+                        <img src="{% static '/img/efectos.png'%}" alt="">
+
+                        <h4>Seguimos Junto a ti</h4>
+                        <p></p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="work contenedor" id="trabajo">
+
+            <h3>Categorias</h3>
+            <p class="after">Todo lo que necesitas esta aqui</p>
+
+            <div class="botones-work">
+
+                <ul>
+                    <li class="filter active" data-nombre='todos'>Todos</li>
+                    <li class="filter" data-nombre='diseño'>Accion</li>
+                    <li class="filter" data-nombre='programacion'>Aventura</li>
+                    <li class="filter" data-nombre='marketing'>Shooter</li>
+                </ul>
+
+            </div>
+
+            <div class="galeria-work">
+
+                <div class="cont-work programacion">
+
+                    <div class="img-work">
+
+                        <img src="{% static '/img/darksouls.jpg'%}" alt="">
+
+                    </div>
+
+                    <div class="textos-work">
+
+                        <h4>DarkSouls III</h4>
+
+                        <input type="submit" class="textos-btn" name="boton1" disable="" value="Comprar">
+
+                    </div>
+
+
+                </div>
+
+                <div class="cont-work programacion">
+
+                    <div class="img-work">
+
+                        <img src="{% static '/imgofertas/metalslug3.jpeg'%}" alt="">
+
+                    </div>
+
+                    <div class="textos-work">
+
+                        <h4>Metal Slug 3</h4>
+
+                        <input type="submit" class="textos-btn" name="boton1" disable="" value="Comprar">
+
+                    </div>
+
+                </div>
+
+                <div class="cont-work programacion">
+
+                    <div class="img-work">
+
+                        <img src="{% static '/imgofertas/darkness2.jpeg'%}" alt="">
+
+                    </div>
+
+                    <div class="textos-work">
+
+                        <h4>Darknes II</h4>
+
+                        <input type="submit" class="textos-btn" name="boton1" disable="" value="Comprar">
+
+                    </div>
+
+                </div>
+
+                <div class="cont-work diseño">
+
+                    <div class="img-work">
+
+                        <img src="{% static '/img/doom.jpg'%}" alt="">
+
+                    </div>
+
+                    <div class="textos-work">
+
+                        <h4>Doom</h4>
+
+                        <input type="submit" class="textos-btn" name="boton1" disable="" value="Comprar">
+
+                    </div>
+
+                </div>
+
+                <div class="cont-work diseño">
+
+                    <div class="img-work">
+
+                        <img src="{% static '/imgofertas/WhatsApp Image 2020-09-21 at 12.20.18.jpeg'%}" alt="">
+
+                    </div>
+
+                    <div class="textos-work">
+
+                        <h4>Move or Die</h4>
+
+                        <input type="submit" class="textos-btn" name="boton1" disable="" value="Comprar">
+
+                    </div>
+
+                </div>
+
+                <div class="cont-work diseño">
+
+                    <div class="img-work">
+
+                        <img src="{% static '/img/godofwar4.jpeg'%}" alt="">
+
+                    </div>
+
+                    <div class="textos-work">
+
+                        <h4>God Of War</h4>
+
+                        <input type="submit" class="textos-btn" name="boton1" disable="" value="Comprar">
+
+                    </div>
+
+                </div>
+
+                <div class="cont-work marketing">
+
+                    <div class="img-work">
+
+                        <img src="{% static '/img/blackops.jpg'%}" alt="">
+
+                    </div>
+
+                    <div class="textos-work">
+
+                        <h4>Call Of Duty Balck Ops III</h4>
+
+                        <input type="submit" class="textos-btn" name="boton1" disable="" value="Comprar">
+                    </div>
+
+                </div>
+
+                <div class="cont-work marketing">
+
+                    <div class="img-work">
+
+                        <img src="{% static '/img/csgo.jpg'%}" alt="">
+
+                    </div>
+
+                    <div class="textos-work">
+
+                        <h4>Counter strike Global Offensive</h4>
+
+
+                        <input type="submit" class="textos-btn" name="boton1" disable="" value="Comprar">
+                    </div>
+
+
+                </div>
+
+                <div class="cont-work marketing">
+
+                    <div class="img-work">
+
+                        <img src="{% static '/img/codadvancewarfare.jpg'%}" alt="">
+
+
+                    </div>
+
+                    <div class="textos-work">
+
+                        <h4>Call of Duty Advance Warfare</h4>
+
+                        <input type="submit" class="textos-btn" name="boton1" disable="" value="Comprar">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer id="contacto">
+
+        <div class="footer contenedor">
+
+            <div class="marca-logo">
+
+                <img src="{% static '/img/blzpng.png'%}" alt="">
+
+            </div>
+
+            <div class="iconos">
+
+                <i class="fab fa-youtube" href="#"></i>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-github"></i>
+
+            </div>
+
+            <p>La pasión e innovación es lo que nos distingue del resto</p>
+
+        </div>
+
+        <div align="center">
+            @Copyright: Diego Carrasco, Sebastian Aguilar, Javier Torres
+        </div>
+
+    </footer>
+
+    <!--Json CDN-->
+
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/filtro.js' %}"></script>
+    <script src="{% static 'js/carousel.js' %}"></script> 
+</body>
+
+
+</html>
