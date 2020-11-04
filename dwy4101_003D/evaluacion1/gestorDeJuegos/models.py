@@ -66,12 +66,12 @@ class Detalle(models.Model):
         return self.precio
 
 
-#class Usuario(models.Model):
-#    nombreUsuario =models.TextField()
-#    nombre = models.TextField()
-#    apellido = models.TextField()
-#    correo = models.EmailField()
-#    password = models.TextField()
+class Usuario(models.Model):
+    nombreUsuario =models.TextField()
+    nombre = models.TextField()
+    apellido = models.TextField()
+    correo = models.EmailField()
+    password = models.TextField()
 
-#    def __str__(self):
-#        return self.nombreUsuario
+    def __str__(self):
+        return self.nombreUsuario
