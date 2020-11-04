@@ -5,7 +5,7 @@ from .models import Desarrolladora
 from .models import Detalle
 from .models import Boleta
 from .models import Sucursal
-
+#from .models import Usuario
 # Register your models here.
 
 class JuegoAdmin(admin.ModelAdmin):
@@ -45,3 +45,8 @@ class SucursalAdmin(admin.ModelAdmin):
     list_display        =['codigo', 'nombre', 'direccion','telefono', 'encargado']
 
 admin.site.register(Sucursal, SucursalAdmin)
+
+#class UsuarioAdmin(admin.ModelAdmin):
+ #   list_display        =['nombreUsuario', 'nombre', 'apellido','correo','password']
+
+#admin.site.register(Usuario, UsuarioAdmin)
