@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
 
 <!DOCTYPE html>
 <html>
@@ -10,7 +10,11 @@
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
-
+    <style>
+        body {
+            background-image: url("{% static 'css/fotos/fondo.png' %}");
+        }
+    </style>
 </head>
 
 
@@ -28,10 +32,9 @@
 
         <div class="login-content">
 
+            <form action="/index" method="POST">
 
-            <form action="/index">
-
-
+                {% csrf_token %}
                 <img src="{% static '/img/avatar.svg'%}">
 
                 <h2 class="title">Inicio sesion</h2>
@@ -48,7 +51,7 @@
 
                         <h5>Nombre de usuario</h5>
 
-                        <input type="text" class="input" required>
+                        <input type="text" name="nombreUsuario" class="input" required>
 
                     </div>
 
@@ -66,7 +69,7 @@
 
                         <h5>Contraseña</h5>
 
-                        <input type="password" class="input" required>
+                        <input type="password" name="password" class="input" required>
 
                     </div>
 
@@ -75,18 +78,19 @@
                 <a href="/registro">¿Desea registrarse?</a>
 
                 <input type="submit" class="btn" value="Iniciar">
+
                 <br>
 
                 <a href="http://127.0.0.1:8000/admin/login/?next=/admin/">¿Eres administrador?</a>
 
             </form>
 
-
         </div>
 
     </div>
 
-    <script type="text/javascript" src="{% static '/js/inicio.js'%}"></script>
+    <script src="{% static '/js/inicio.js'%}"></script>
+
 </body>
 
 </html>

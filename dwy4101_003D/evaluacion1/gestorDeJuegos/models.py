@@ -65,13 +65,3 @@ class Detalle(models.Model):
     def __int__(self):
         return self.precio
 
-
-class Usuario(models.Model):
-    nombreUsuario =models.TextField()
-    nombre = models.TextField()
-    apellido = models.TextField()
-    correo = models.EmailField()
-    password = models.TextField()
-
-    def __str__(self):
-        return self.nombreUsuario

@@ -1,5 +1,4 @@
 {% load static %}
-<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -8,15 +7,25 @@
     <title>Registro</title>
     <link rel="stylesheet" href="{% static 'css/registro.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+
+
+    <style>
+        body {
+            background-image: url("{% static 'css/fotos/fondo.png' %}");
+        }
+    </style>
+
+
 </head>
 
 <body>
     <form action="" method="POST" id="form">
         <div class="form">
             <h1>Registro</h1>
-
+            {% csrf_token %}
             <div class="grupo">
-                <input type="name" name="" id="name"><span class="barra"></span>
+                <input type="name" name="nombreuser" class="nombreuser" id="name"><span class="barra"></span>
                 <label for="">Nombre de usuario</label>
             </div>
 
@@ -32,24 +41,28 @@
 
 
             <div class="grupo">
-                <input type="name" name="" id="name"><span class="barra"></span>
+                <input type="name" name="correo" class="correo" id="name"><span class="barra"></span>
                 <label for="">Correo</label>
             </div>
             <div class="grupo">
-                <input type="password" name="" id="password"><span class="barra"></span>
+                <input type="password" name="password" class="password" id="password"><span class="barra"></span>
                 <label for="">Password</label>
             </div>
 
-            <button type="submit">Registrarse</button>
+            <button>Registrarse</button>
             <p class="warnings" id="warnings"></p>
 
             <div align="center"><a href="/inicio">Inicio Sesion</a>
             </div>
 
         </div>
+
     </form>
 
-    <script src="{% static 'js/registro.js' %}"></script>
+    <!--<script src="{% static '/js/registro.js'%}"></script>-->
+
+
+
 </body>
 
 </html>
