@@ -17,6 +17,6 @@ def registro(request):
         correo = request.POST["correo"]
         clave =  request.POST["password"]
         User.objects.create(username=nombre, email=correo, password=make_password(clave))
-        return redirect(settings.LOGIN_REDIRECT_URL, request.path)
+        return redirect(settings.LOGIN_REDIRECT_URL1, request.path)
     return render(request,'registro.html',{})
 
