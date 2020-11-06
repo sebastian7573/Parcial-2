@@ -125,5 +125,5 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 
-LOGIN_REDIRECT_URL = '/index' #pagina para enviar una vez logueado
-LOGOUT_REDIRECT_URL = '/inicio' #pagina para el inicio de sesion
+LOGIN_REDIRECT_URL = '/inicio' #pagina para enviar una vez logueado
+LOGOUT_REDIRECT_URL = '/index' #pagina para el inicio de sesion

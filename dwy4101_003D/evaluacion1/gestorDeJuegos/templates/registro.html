@@ -1,67 +1,118 @@
 {% load static %}
-<html lang="es">
+
+<!DOCTYPE html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel="stylesheet" href="{% static 'css/registro.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
 
-
-
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
     <style>
         body {
             background-image: url("{% static 'css/fotos/fondo.png' %}");
         }
     </style>
-
-
 </head>
 
+
 <body>
-    <form action="" method="POST" id="form">
-        <div class="form">
-            <h1>Registro</h1>
-            {% csrf_token %}
-            <div class="grupo">
-                <input type="name" name="nombreuser" class="nombreuser" id="name"><span class="barra"></span>
-                <label for="">Nombre de usuario</label>
-            </div>
-
-            <div class="grupo">
-                <input type="name" name="" id="name"><span class="barra"></span>
-                <label for="">Nombre</label>
-            </div>
-
-            <div class="grupo">
-                <input type="name" name="" id="name"><span class="barra"></span>
-                <label for="">Apellido</label>
-            </div>
+    <img class="wave" src="{% static '/img/wave.png'%}">
 
 
-            <div class="grupo">
-                <input type="name" name="correo" class="correo" id="name"><span class="barra"></span>
-                <label for="">Correo</label>
-            </div>
-            <div class="grupo">
-                <input type="password" name="password" class="password" id="password"><span class="barra"></span>
-                <label for="">Password</label>
-            </div>
+    <div class="container">
 
-            <button>Registrarse</button>
-            <p class="warnings" id="warnings"></p>
+        <div class="img">
 
-            <div align="center"><a href="/inicio">Inicio Sesion</a>
-            </div>
+            <img src="{% static '/img/bg.svg'%}">
 
         </div>
 
-    </form>
+        <div class="login-content">
 
-    <!--<script src="{% static '/js/registro.js'%}"></script>-->
+            <form action="" method="POST">
 
 
+                <img src="{% static '/img/avatar.svg'%}">
+
+                <h2 class="title">Registro</h2>
+                {% csrf_token %}
+
+                <div class="input-div one">
+
+                    <div class="i">
+
+                        <i class="fas fa-user"></i>
+
+                    </div>
+
+                    <div class="div">
+
+                        <h5>Nombre</h5>
+
+                        <input type="name" name="nombreuser" class="input" required>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="input-div one">
+
+                    <div class="i">
+
+                        <i class="fas fa-envelope"></i>
+
+                    </div>
+
+                    <div class="div">
+
+                        <h5>Correo</h5>
+
+                        <input type="email" name="correo" class="input" required>
+
+                    </div>
+
+                </div>
+
+                <div class="input-div one">
+
+                    <div class="i">
+
+                        <i class="fas fa-lock"></i>
+
+                    </div>
+
+                    <div class="div">
+
+                        <h5>Contraseña</h5>
+
+                        <input type="password" name="password" class="input" required>
+
+                    </div>
+
+                </div>
+
+                <div align="center">
+                    <a href="/inicio">ir a iniciar sesion</a>
+                </div>
+
+                <input type="submit" class="btn" value="Registrarse">
+
+
+
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="{% static '/js/inicio.js'%}"></script>
 
 </body>
 

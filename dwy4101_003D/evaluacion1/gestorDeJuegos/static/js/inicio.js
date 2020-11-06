@@ -1,4 +1,5 @@
 const inputs = document.querySelectorAll(".input");
+const email = document.getElementById("email")
 
 
 function addcl() {
