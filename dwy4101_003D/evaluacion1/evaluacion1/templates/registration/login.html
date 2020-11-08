@@ -1,0 +1,58 @@
+{% extends "inicio.html" %} {% block contenido %} {% if form.errors %}
+<p>Usuario o clave no son válidas para el ingreso.</p>
+{% endif %}
+<form action="{% url 'login' %}" method="POST">
+
+
+    <img src="{% static '/img/avatar.svg'%}">
+
+    <h2 class="title">Inicio sesion</h2>
+    {% csrf_token %}
+    <div class="input-div one">
+
+        <div class="i">
+
+            <i class="fas fa-user"></i>
+
+        </div>
+
+        <div class="div">
+
+            <h5>Nombre de usuario</h5>
+
+            <input type="text" name="nombreuser" class="input" required>
+
+        </div>
+
+    </div>
+
+    <div class="input-div pass">
+
+        <div class="i">
+
+            <i class="fas fa-lock"></i>
+
+        </div>
+
+        <div class="div">
+
+            <h5>Contraseña</h5>
+
+            <input type="password" name="password" class="input" required>
+
+        </div>
+
+    </div>
+
+    <a href="/registro">¿Desea registrarse?</a>
+
+    <input type="submit" class="btn" value="Iniciar">
+    <input type="hidden" name="next" value="{{ next }}">
+
+    <br>
+
+    <a href="http://127.0.0.1:8000/admin/login/?next=/admin/">¿Eres administrador?</a>
+
+</form>
+
+{% endblock %}

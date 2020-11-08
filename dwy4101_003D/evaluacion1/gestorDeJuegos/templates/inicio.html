@@ -31,14 +31,13 @@
         </div>
 
         <div class="login-content">
-
-            <form action="/index" method="POST">
-
-
-                <img src="{% static '/img/avatar.svg'%}">
+            <form action="" method="POST">
+                {{ form.as_p }} {% csrf_token %}
+                <button type="submit">Login</button>
+                <!--  <img src="{% static '/img/avatar.svg'%}">
 
                 <h2 class="title">Inicio sesion</h2>
-                {% csrf_token %}
+
                 <div class="input-div one">
 
                     <div class="i">
@@ -51,7 +50,7 @@
 
                         <h5>Nombre de usuario</h5>
 
-                        <input type="text" name="nombreUsuario" class="input" required>
+                        <input type="text" name="nombreuser" class="input" required>
 
                     </div>
 
@@ -78,6 +77,7 @@
                 <a href="/registro">¿Desea registrarse?</a>
 
                 <input type="submit" class="btn" value="Iniciar">
+                <input type="hidden" name="next" value="{{ next }}">
 
                 <br>
 
@@ -90,7 +90,10 @@
     </div>
 
     <script src="{% static '/js/inicio.js'%}"></script>
+-->
+                <a href="/registro">¿Desea registrarse?</a>
 
+                <a href="http://127.0.0.1:8000/admin/login/?next=/admin/">¿Eres administrador?</a>
 </body>
 
 </html>
