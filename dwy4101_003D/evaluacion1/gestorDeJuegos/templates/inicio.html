@@ -34,11 +34,11 @@
 
             <form action="/index" method="POST">
 
-                {% csrf_token %}
+
                 <img src="{% static '/img/avatar.svg'%}">
 
                 <h2 class="title">Inicio sesion</h2>
-
+                {% csrf_token %}
                 <div class="input-div one">
 
                     <div class="i">

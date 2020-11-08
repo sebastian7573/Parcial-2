@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="https://media.discordapp.net/attachments/704541749690761217/758129576769093692/triangle_PNG30.png?width=481&height=481" type="image/x-icon">
+
     <!--Json CDN-->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
@@ -51,14 +52,19 @@
                     <a href="#" id="enlace-servicio" class="btn-header">Servicios</a>
                     <a href="#" id="enlace-trabajo" class="btn-header">Categorias</a>
                     <a href="#" id="enlace-contacto" class="btn-header">Contacto</a>
-                    <a href="/inicio" id="enlace-contacto" class="btn-header">Iniciar Sesion</a>
 
+                    <a href="/inicio" id="enlace-contacto" class="btn-header">Iniciar Sesion</a>
 
 
 
                 </div>
 
-                <button class="botonimagen"></button>
+
+                {% if user.is_authenticated %}
+                <li class="nav-item nav-link">Usuario: {{user.get_username}}</li>
+                <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">Cerrar sesion</a></li> {% else %}
+                <li class="nav-item"><a href="{% url 'login' %}?next={{request.path}}" class="nav-link">Cerrar sesion</a></li> {% endif %}
+
         </nav>
 
         <!--carrusel-->
@@ -450,7 +456,6 @@
 
     <!--Json CDN-->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-
     <script src="{% static 'js/jquery.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/filtro.js' %}"></script>
