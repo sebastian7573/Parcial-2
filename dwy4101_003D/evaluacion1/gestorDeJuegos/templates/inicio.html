@@ -32,9 +32,9 @@
 
         <div class="login-content">
             <form action="" method="POST">
-                {{ form.as_p }} {% csrf_token %}
-                <button type="submit">Login</button>
-                <!--  <img src="{% static '/img/avatar.svg'%}">
+                <!--{{ form.as_p }} -->{% csrf_token %}
+
+                <img src="{% static '/img/avatar.svg'%}">
 
                 <h2 class="title">Inicio sesion</h2>
 
@@ -50,7 +50,7 @@
 
                         <h5>Nombre de usuario</h5>
 
-                        <input type="text" name="nombreuser" class="input" required>
+                        <input type="text" name="username" class="input" required>
 
                     </div>
 
@@ -90,10 +90,8 @@
     </div>
 
     <script src="{% static '/js/inicio.js'%}"></script>
--->
-                <a href="/registro">¿Desea registrarse?</a>
 
-                <a href="http://127.0.0.1:8000/admin/login/?next=/admin/">¿Eres administrador?</a>
+
 </body>
 
 </html>
