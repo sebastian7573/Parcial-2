@@ -6,6 +6,7 @@
 ::before,
 ::after {
     margin: 0;
+    overflow: auto;
     padding: 0;
     box-sizing: border-box;
 }
@@ -17,6 +18,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.login-content {
+    overflow: auto;
 }
 
 h1 {
@@ -101,6 +106,14 @@ input:focus~.barra::before {
     margin: auto;
     color: #2abb7f;
     padding-top: 20px;
+}
+
+
+/*Plataforma*/
+
+.plataforma {
+    padding: 0%;
+    color: #0e9662;
 }
 
 button {

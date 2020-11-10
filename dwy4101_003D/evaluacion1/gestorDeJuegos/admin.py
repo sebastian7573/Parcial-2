@@ -5,11 +5,12 @@ from .models import Desarrolladora
 from .models import Detalle
 from .models import Boleta
 from .models import Sucursal
+from .models import Reserva
 
 # Register your models here.
 
 class JuegoAdmin(admin.ModelAdmin):
-    list_display        =['codigo','nombre','categoria','stock','plataforma','descripcion']
+    list_display        =['codigo','nombre','categoria','stock','plataforma','descripcion', 'imagen']
 
     list_display_links  =['codigo','nombre']
 admin.site.register(VideoJuego, JuegoAdmin)
@@ -46,3 +47,6 @@ class SucursalAdmin(admin.ModelAdmin):
 
 admin.site.register(Sucursal, SucursalAdmin)
 
+class ReservarAdmin(admin.ModelAdmin):
+    list_display        =['nombre', 'categoria','plataforma','imagen']
+admin.site.register(Reserva, ReservarAdmin)

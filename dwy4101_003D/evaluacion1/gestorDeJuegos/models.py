@@ -27,6 +27,7 @@ class VideoJuego(models.Model):
     precioCosto = models.DecimalField(max_digits=20, decimal_places=0)
     precioVenta = models.DecimalField(max_digits=20, decimal_places=0)
     stock       = models.IntegerField()
+    imagen      = models.ImageField(upload_to="juegos", null = True)
 
     def __str__(self):
         return self.nombre
@@ -65,3 +66,11 @@ class Detalle(models.Model):
     def __int__(self):
         return self.precio
 
+class Reserva(models.Model):
+    nombre = models.TextField()
+    categoria = models.TextField()
+    plataforma = models.TextField()
+    imagen      = models.ImageField(upload_to="juegos", null = True)
+
+    def __str__(self):
+        return self.nombre

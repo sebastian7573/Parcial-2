@@ -31,7 +31,7 @@
         </div>
 
         <div class="login-content">
-            <form action="" method="POST">
+            <form action="{% url 'login' %}" method="POST">
                 <!--{{ form.as_p }} -->{% csrf_token %}
 
                 <img src="{% static '/img/avatar.svg'%}">
@@ -75,6 +75,7 @@
                 </div>
 
                 <a href="/registro">¿Desea registrarse?</a>
+                <a href="/registrojuegos">registrar juego</a>
 
                 <input type="submit" class="btn" value="Iniciar">
                 <input type="hidden" name="next" value="{{ next }}">

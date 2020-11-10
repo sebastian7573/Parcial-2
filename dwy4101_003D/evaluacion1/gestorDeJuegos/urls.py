@@ -9,6 +9,10 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('inicio', views.inicio, name='inicio'),
     path('registro', views.registro, name='registro'),
+    path('sesioniniciada', views.sesioniniciada, name='sesioniniciada'),
+    path('listajuegos', views.listajuegos, name='listajuegos'),
+    path('registrojuegos', views.registrojuegos, name='registrojuegos')
+    
    
    
 ]

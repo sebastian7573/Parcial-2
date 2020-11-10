@@ -125,6 +125,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 
-LOGIN_REDIRECT_URL = '/index' #pagina para enviar una vez logueado
+LOGIN_REDIRECT_URL = '/sesioniniciada' #pagina para enviar una vez logueado
 LOGOUT_REDIRECT_URL = '/index' #pagina para el inicio de sesion
 LOGIN_REDIRECT_URL1 = '/inicio'
+
+#IMAGENES EN DJANGO
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')

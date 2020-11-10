@@ -10,15 +10,24 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login as do_login
 from django.contrib.auth import logout as do_logout
+#PAL CRUUUU
+from .models import VideoJuego
 
 
 # Create your views here.
 def index(request):
+    
+
+    return render(request,'index.html', )
+     
+   
+def sesioniniciada(request):
     # Si estamos identificados devolvemos la portada
    # if request.user.is_authenticated:
-       return render(request,'index.html',{})
+       return render(request,'sesioniniciada.html',{})
      # En otro caso redireccionamos al login
    # return redirect('/inicio')
+
 
 def inicio(request):
      # Creamos el formulario de autenticación vacío
@@ -45,6 +54,13 @@ def inicio(request):
     # Si llegamos al final renderizamos el formulario
     return render(request,'inicio.html',{'form': form})
 
+def listajuegos(request):
+    # Si estamos identificados devolvemos la portada
+   # if request.user.is_authenticated:
+       return render(request,'listajuegos.html',{})
+     # En otro caso redireccionamos al login
+   # return redirect('/inicio')
+
 def registro(request):
     if request.method == "POST":
         nombre = request.POST["nombreuser"]
@@ -58,3 +74,9 @@ def logout(request):
     do_logout(request)
     # Redireccionamos a la portada
     return redirect('/')
+
+    
+def registrojuegos(request):
+        
+
+    return render(request,'registrojuegos.html', )
