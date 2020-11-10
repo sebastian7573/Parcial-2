@@ -47,6 +47,6 @@ class SucursalAdmin(admin.ModelAdmin):
 
 admin.site.register(Sucursal, SucursalAdmin)
 
-class ReservarAdmin(admin.ModelAdmin):
+class ReservaAdmin(admin.ModelAdmin):
     list_display        =['nombre', 'categoria','plataforma','imagen']
-admin.site.register(Reserva, ReservarAdmin)
+admin.site.register(Reserva, ReservaAdmin)

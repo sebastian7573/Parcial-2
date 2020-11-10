@@ -3,12 +3,12 @@
 <div class="login-content">
 
     <form action="" method="POST">
-
+        {% csrf_token %}
 
         <img src="{% static '/img/avatar.svg'%}">
 
         <h4 class="title">Reserva de juegos</h4>
-        {% csrf_token %}
+
         <div class="input-div one">
 
             <div class="i">
@@ -21,19 +21,18 @@
 
                 <h5>Nombre</h5>
 
-                <input type="name" name="nombreuser" class="input" required>
+                <input type="name" name="nombre" id="nombre" class="input" required>
 
             </div>
 
         </div>
 
 
-
         <div class="input-div one">
 
             <div class="i">
 
-                <i class="fa fa-gamepad" aria-hidden="true"></i>
+                <i class="fa fa-gavel" aria-hidden="true"></i>
 
             </div>
 
@@ -41,85 +40,57 @@
 
                 <h5>Categoria</h5>
 
-
-
-            </div>
-            <div class="categorias">
-
-                <Label for="categoria"></Label>
-
-                <select name="categoria" class="categoria" id="categoria">
-            <option value="Accion">Acción</option>
-            <option value="Aventura">Aventura</option>
-            <option value="Carreras">Carreras</option>
-            <option value="Deportes">Deportes</option>
-            <option value="FPS">FPS</option>
-            <option value="Shooter">Shooter</option>
-            <option value="Mundo Abierto">Mundo Abierto</option>
-            
-            
-        </select>
+                <input type="name" name="categoria" id="categoria" class="input" required>
 
             </div>
         </div>
-
-
         <div class="input-div one">
 
             <div class="i">
 
-                <i class="fa fa-cubes" aria-hidden="true"></i>
-
-            </div>
-            <div class="div">
-
-                <h5>Categoria</h5>
-
-
-
-            </div>
-
-            <div class="plataforma">
-
-                <Label for="plataforma"></Label>
-
-                <select name="plataforma" class="plataforma" id="plataforma">
-            <option value="Ps4">PS4</option>
-            <option value="Xbox One">Xbox One</option>
-            <option value="PC">PC</option>
-            <option value="Switch">Switch</option>
-            
-        </select>
-
-            </div>
-        </div>
-
-        <div class="input-div one">
-
-            <div class="i">
-
-                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                <i class="fa fa-gavel" aria-hidden="true"></i>
 
             </div>
 
             <div class="div">
 
+                <h5>Plataforma</h5>
+
+                <input type="name" name="plataforma" id="plataforma" class="input" required>
+
+            </div>
+
+        </div>
+        <div class="input-div one">
+
+            <div class="i">
+
+                <i class="fa fa-gavel" aria-hidden="true"></i>
+
+            </div>
+
+            <div class="div">
                 <h5>Imagen</h5>
 
+                <input type="file" name="imagen" class="imagen" required>
+
+
 
             </div>
 
-            <input type="file" name="imagen" class="imagen" required>
+
 
 
 
         </div>
+        <input type="submit" name="btnreserva" class="btn" value="RESERVAR">
+
 
         <div align="center">
             <a href="/index">Volver al inicio</a>
         </div>
 
-        <input type="submit" class="btn" value="RESERVAR">
+
 
 
 
