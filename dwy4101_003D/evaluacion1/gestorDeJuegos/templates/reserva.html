@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Reserva</title>
+
+    <link rel="stylesheet" href="{% static 'css/tablas.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reserva.css' %}">
+    <link rel="stylesheet" href="{% static 'css/buscar.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <style>
+        body {
+            background: url("{% static 'css/fotos/fondobuscar.jpg' %}")no-repeat;
+            font-family: 'Open Sans', sans-serif;
+            background-size: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <form "" method="POST">
+        {% csrf_token %}
+
+
+
+        <div class="wrap">
+            <h1></h1>
+            <h1></h1>
+
+            <br>
+            <br>
+            <br>
+            <div class="store-wrapper">
+
+
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre Juego</th>
+                            <th>Categoria</th>
+                            <th>Plataforma</th>
+                            <!--<th>Imagen</th>-->
+                            <th></th>
+                            <th></th>
+
+                        </tr>
+                    </thead>
+
+                    <tr>
+
+                        {% for a in juegos %}
+                        <tr>
+
+                            <td>{{a.nombre}}</td>
+                            <td>{{a.categoria}}</td>
+                            <td>{{a.plataforma}}</td>
+                            <!-- <td><img id="imagen" src="{{a.imagen.url}}" width="200" height="200">-->
+
+                            </td>
+                            <td>
+                                <a href="{% url 'eliminarjuego' a.nombre%}" class="btn-neon">
+                                    <span id="span1"></span>
+                                    <span id="span2"></span>
+                                    <span id="span3"></span>
+                                    <span id="span4"></span> Eliminar</a>
+                            </td>
+                        </tr>
+
+                        {% endfor %}
+
+                    </tr>
+
+                </table>
+                <div class="category_list">
+                    <a href="/sesioniniciada" class="category_item" category="all">Volver a inicio</a>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </form>
+    <script src="{% static 'js/jquery-3.2.1.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

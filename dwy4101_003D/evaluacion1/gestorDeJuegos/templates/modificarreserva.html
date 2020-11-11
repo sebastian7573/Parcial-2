@@ -1,9 +1,10 @@
-{% extends "registro.html" %} {% load static %} {% block newjuegos %}
+{% extends "registro.html" %} {% load static %} {% block modificar %}
 
 <div class="login-content">
-
     <form action="" method="POST">
         {% csrf_token %}
+
+        <input type="hidden" name="nombre" id="nombre" value="{{juegos.nombre}}">
 
         <img src="{% static '/img/avatar.svg'%}">
 
@@ -21,7 +22,7 @@
 
                 <h5>Nombre</h5>
 
-                <input type="name" name="nombre" id="nombre" class="input" required>
+                <input type="name" name="nombre" id="nombre" class="input" value="{{juegos.nombre}}" required>
 
             </div>
 
@@ -40,7 +41,7 @@
 
                 <h5>Categoria</h5>
 
-                <input type="name" name="categoria" id="categoria" class="input" required>
+                <input type="name" name="categoria" id="categoria" class="input" value="{{juegos.categoria}}" required>
 
             </div>
         </div>
@@ -56,7 +57,7 @@
 
                 <h5>Plataforma</h5>
 
-                <input type="name" name="plataforma" id="plataforma" class="input" required>
+                <input type="name" name="plataforma" id="plataforma" class="input" value="{{juegos.plataforma}}" required>
 
             </div>
 
@@ -72,7 +73,7 @@
             <div class="div">
                 <h5>Imagen</h5>
 
-                <input type="file" name="imagen" class="imagen" required>
+                <input type="file" name="imagen" class="imagen" value="{{juegos.imagen}}" required>
 
 
 
@@ -83,7 +84,9 @@
 
 
         </div>
-        <input type="submit" name="btnreserva" class="btn" value="RESERVAR">
+        <input type="submit" name="btnreserva" class="btn" value="MODIFICAR">
+
+
 
 
         <div align="center">
@@ -102,6 +105,4 @@
     </form>
 
 </div>
-
-
 {% endblock %}

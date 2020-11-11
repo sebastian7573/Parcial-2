@@ -1,5 +1,6 @@
 {% extends 'index.html' %} {% load static %} {% block sesioniniciada %} {% if user.is_authenticated %}
 <a href="/registrojuegos" id="enlace-inicio" class="btn-header">Reservar Juego</a>
+<a href="/reservasdejuegos">Ver listado de reservas</a>
 <a class="nav-item nav-link">Usuario: {{user.get_username}}</a>
 <a href="{% url 'logout' %}" class="nav-item nav-link">Cerrar sesion</a> {% else %}
 <a href="{% url 'login' %}?next={{request.path}}" class="nav-item nav-link">Cerrar sesion</a> {% endif %} {% endblock %}
