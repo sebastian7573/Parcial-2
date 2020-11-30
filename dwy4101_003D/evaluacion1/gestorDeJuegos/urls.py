@@ -1,7 +1,11 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
-from .views import buscareserva
+from .views import buscareserva, ReservaViewSet
+from rest_framework import routers
 
+
+router = routers.DefaultRouter()
+router.register('Reserva', ReservaViewSet )
 
 
 
@@ -15,7 +19,7 @@ urlpatterns = [
     path('reservasdejuegos', views.reservasdejuegos, name='reservasdejuegos'),
     path('eliminarjuego/<nombre>/',views.eliminarjuegos, name='eliminarjuego'),
     path('modificarreserva/<nombre>/',views.modificarreserva, name='modificarreserva'),
-    
+    path('api/', include(router.urls)),
    
    
 ]

@@ -5,6 +5,9 @@ from django.contrib import messages
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
 from django.conf import settings
+
+
+
 #PAL LOGIN
 from django.contrib.auth import authenticate
 from django.contrib.auth.forms import AuthenticationForm
@@ -15,6 +18,9 @@ from gestorDeJuegos.models import Reserva
 from django.db.models import Q
 #PA LOS MENSAJES    
 from django.contrib import messages
+#PAL REST_FRAMEWORK
+from rest_framework import viewsets
+from .serializers import ReservaSerializer
 
 
 
@@ -149,3 +155,6 @@ def logout(request):
     return redirect('/')
 
     
+class ReservaViewSet(viewsets.ModelViewSet):
+    queryset = Reserva.objects.all()
+    serializer_class = ReservaSerializer
