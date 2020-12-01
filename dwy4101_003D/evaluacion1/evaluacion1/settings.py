@@ -31,6 +31,10 @@ ALLOWED_HOSTS = []
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
+SOCIAL_AUTH_FACEBOOK_KEY = '131951878490817'
+SOCIAL_AUTH_FACEBOOK_SECRET = '8109205a0e880d856f6f1617b7712146'
+
+
 
 # Application definition
 
@@ -43,6 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'gestorDeJuegos',
     'rest_framework',
+    'social_django',
+    'pwa',
 ]
 
 MIDDLEWARE = [
@@ -53,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'evaluacion1.urls'
@@ -68,6 +75,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -133,3 +142,13 @@ LOGIN_REDIRECT_URL1 = '/inicio'
 #IMAGENES EN DJANGO
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+#PAL LOGIN DE FACEBOOK
+AUTHENTICATION_BACKENDS = (
+'social_core.backends.facebook.FacebookOAuth2',
+'django.contrib.auth.backends.ModelBackend',
+)
+
+
+#PAL SERVICE WOKER
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'serviceworker.js')
