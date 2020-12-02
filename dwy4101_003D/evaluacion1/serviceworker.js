@@ -1,9 +1,16 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
     '',
+    '/registro',
+    '/inicio',
+    '/registrojuegos',
+    '/reservasdejuegos',
+    '/admin/login/?next=/admin/',
+
     'static/css/estilos.css',
     'static/css/menu.css',
     'static/css/fotos/fondo.png',
+
 
 
 ];

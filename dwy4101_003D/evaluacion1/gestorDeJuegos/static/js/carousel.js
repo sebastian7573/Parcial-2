@@ -11,9 +11,9 @@ window.addEventListener('load', function() {
         },
         responsive: [{
             // screens greater than >= 775px
-            breakpoint: 450,
+            breakpoint: 600,
             settings: {
-                // Set to `auto` and provide item width to adjust to viewport
+
                 slidesToShow: '2',
                 slidesToScroll: '2',
                 itemWidth: 150,

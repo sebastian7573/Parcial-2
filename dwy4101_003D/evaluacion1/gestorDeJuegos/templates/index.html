@@ -12,13 +12,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>C&S Universe</title>
-    <link rel="stylesheet" href="{% static 'css/estilos.css' %}"> {% load pwa %} {% progressive_web_app_meta %}
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}"> {% load pwa %} {% progressive_web_app_meta %}
 
 
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="https://media.discordapp.net/attachments/704541749690761217/758129576769093692/triangle_PNG30.png?width=481&height=481" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static '/img1/logo2.png' %}" type="image/x-icon">
 
     <!--Json CDN-->
 
@@ -44,7 +45,7 @@
 
                 <div class="logo">
 
-                    <img src="{% static '/img/blzpng.png'%}" alt="">
+                    <img src="{% static '/img1/logo2.png' %}" alt="">
 
 
                 </div>
@@ -62,6 +63,7 @@
 
                 </div>
         </nav>
+
 
 
         <!--carrusel-->
@@ -457,6 +459,7 @@
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/filtro.js' %}"></script>
     <script src="{% static 'js/carousel.js' %}"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
 
 
 </body>
