@@ -27,7 +27,7 @@ SECRET_KEY = 'qcm5+!xl%@u^cl=^!46f2n1a8-vvh7h8^ph3p8lp5p4v$s(zx='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.0.2.2','localhost']
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 

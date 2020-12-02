@@ -2,7 +2,9 @@ var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
     '',
     'static/css/estilos.css',
+    'static/css/menu.css',
     'static/css/fotos/fondo.png',
+
 
 ];
 
